@@ -18,8 +18,8 @@ import {FlexLayoutModule} from '@angular/flex-layout'
   imports: [
     CommonModule,
     MatDividerModule,
-    MatToolbarModule,
     MatIconModule,
+    MatToolbarModule,
     FlexLayoutModule
   ],
   exports:[
