@@ -5,7 +5,7 @@ import { DashboardComponent } from 'src/app/modules/dashboard/dashboard.componen
 import { RouterModule } from '@angular/router';
 import { BillsComponent } from 'src/app/modules/bills/bills.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { MatSidenavModule, MatDividerModule, MatCardModule, MatPaginatorModule,MatInputModule , MatTableModule,MatFormFieldModule,MatDatepickerModule,MatNativeDateModule} from '@angular/material';
+import { MatSidenavModule, MatDividerModule, MatCardModule, MatPaginatorModule,MatInputModule,MatDialogModule ,MatIconModule, MatTableModule,MatFormFieldModule,MatDatepickerModule,MatNativeDateModule} from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -33,7 +33,9 @@ import { DashboardService } from 'src/app/modules/dashboard.service';
     MatFormFieldModule,
     MatDatepickerModule,
     MatInputModule ,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatIconModule,
+    MatDialogModule
   ],
   providers: [
     DashboardService
