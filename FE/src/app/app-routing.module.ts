@@ -1,22 +1,23 @@
-import {NgModule} from '@angular/core';
-import {Routes,RouterModule} from '@angular/router';
-import { DefaultComponent } from './layout/default/default.component';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { DefaultComponent } from './layouts/default/default.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
-import { InvoicesComponent } from './modules/invoices/invoices.component';
+import { BillsComponent } from './modules/bills/bills.component';
 
-const routes : Routes =[{
+const routes: Routes = [{
+  path: '',
+  component: DefaultComponent,
+  children: [{
     path: '',
-    component : DefaultComponent,
-    children: [{
-        path: '',
-        component: DashboardComponent
-    },{
-        path:'invoices',
-        component: InvoicesComponent
-    }]
-}]
+    component: DashboardComponent
+  }, {
+    path: 'bills',
+    component: BillsComponent
+  }]
+}];
+
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports : [RouterModule]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AppRoutingMoudle{}
+export class AppRoutingModule { }
